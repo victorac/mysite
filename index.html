@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<h1>Welcome</h1>
+<h2>Development in progress</h2>
+<script>
+	const proto = window.location.protocol === "https:" ? "wss" : "ws";
+	const ws = new WebSocket(`${proto}:${window.location.host}`);
+
+	ws.onmessage = (event) => console.log(event.data);
+</script>
